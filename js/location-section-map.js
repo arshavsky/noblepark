@@ -22,17 +22,37 @@ function initialize() {
     var markers = [
         ['Auckland University, Grafton Campus', -36.861717, 174.769424],
         ['Auckland Boys Grammar', -36.872432,174.768126],
+        ['ACG Parnell College', -36.863163,174.778555],
+        ['Epsom Girls Grammar', -36.876177,174.773639],
+        ['Auckland University Newmarket Campus', -36.865905,174.7733],
+        ['St Peters College', -36.868412,174.768575],
     ];
                         
     // Info Window Content
     var infoWindowContent = [
         ['<div class="info_content">' +
-        '<h3>Noble Park</h3>' +
+        '<h3>Auckland University, Grafton Campus</h3>' +
         '<p>Spacious apartments, with no compromise on quality, for luxurious living. Constructed to the highest standard, with style and comfort in mind. The James is a place to call home.</p>' +        '</div>'],
         ['<div class="info_content">' +
-        '<h3>Palace of Westminster</h3>' +
+        '<h3>Auckland Boys Grammar</h3>' +
         '<p>The Palace of Westminster is the meeting place of the House of Commons and the House of Lords, the two houses of the Parliament of the United Kingdom. Commonly known as the Houses of Parliament after its tenants.</p>' +
-        '</div>']
+        '</div>'],
+        ['<div class="info_content">' +
+        '<h3>ACG Parnell College</h3>' +
+        '<p>The Palace of Westminster is the meeting place of the House of Commons and the House of Lords, the two houses of the Parliament of the United Kingdom. Commonly known as the Houses of Parliament after its tenants.</p>' +
+        '</div>'],
+        ['<div class="info_content">' +
+        '<h3>Epsom Girls Grammar</h3>' +
+        '<p>The Palace of Westminster is the meeting place of the House of Commons and the House of Lords, the two houses of the Parliament of the United Kingdom. Commonly known as the Houses of Parliament after its tenants.</p>' +
+        '</div>'],
+        ['<div class="info_content">' +
+        '<h3>Auckland University Newmarket Campus</h3>' +
+        '<p>The Palace of Westminster is the meeting place of the House of Commons and the House of Lords, the two houses of the Parliament of the United Kingdom. Commonly known as the Houses of Parliament after its tenants.</p>' +
+        '</div>'],
+        ['<div class="info_content">' +
+        '<h3>St Peters College</h3>' +
+        '<p>The Palace of Westminster is the meeting place of the House of Commons and the House of Lords, the two houses of the Parliament of the United Kingdom. Commonly known as the Houses of Parliament after its tenants.</p>' +
+        '</div>'],
     ];
         
     // Display multiple markers on a map

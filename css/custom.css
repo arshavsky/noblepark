@@ -63,25 +63,26 @@ sup {
 /* general settings end */
 
 /* front page greeting */
-#front-page-greeting{
+#front-page-greeting {
+  display: table;
+  height: 100vh;
+  width: 100vw;
   background: transparent;
-  bottom: 0;
-  height: 450px;
-  left: 0;
+  overflow: hidden;
   margin: auto;
-  position: absolute;
   top: 0;
+  left: 0;
   right: 0;
-  width: 100%;
   text-align: center;
 }
 
 #front-page-greeting h1 {
-  text-transform: uppercase;
-  padding-bottom: 0;
-  margin-bottom: 0;
-  font-weight: 300;
-  font-size: 150px;
+  font-weight: 400;
+  letter-spacing: -0.05em;
+  display: table-cell;
+  vertical-align: middle;
+  font-size: 50px;
+  line-height: 70px;
   color: #ffffff;
 }
 
@@ -100,7 +101,6 @@ sup {
   background-color: transparent;
   border: 2px solid white;
   font-size: 1.2em;
-  text-transform: uppercase;
   font-weight: 400;
 
   -o-transition:0.2s;
@@ -202,6 +202,15 @@ sup {
   -moz-transition:.25s;
   -webkit-transition:.25s;
   transition:.25s;
+}
+
+.passive a {
+  color: white !important;
+  background-color: transparent;
+}
+
+.passive a:hover {
+  color: #E68A00 !important; /* Orange Passive Menu Hover */
 }
 /* navigation ends */
 
@@ -322,7 +331,7 @@ sup {
  }
 
  #faq-header {
-  margin-top: 0;
+  margin-top: 1em;
   padding-top: 0;
  }
 
@@ -406,6 +415,8 @@ sup {
 #top-of-page {
   width: 100vw;
   height: 100vh;
+  overflow: hidden;
+  background-color: rgba(0,0,0, 0.3);
   padding-top: 0;
   margin-top: 0;
   font-size: 7vw;
