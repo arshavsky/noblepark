@@ -1,6 +1,6 @@
 $(window).scroll(function() {
     var windscroll = $(window).scrollTop();
-    if (windscroll >= 100) {
+    if (windscroll >= 1) {
         $('nav').removeClass('passive');
         $('nav').addClass('fixed');
         $('#page section').each(function(i) {
