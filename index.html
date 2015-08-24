@@ -39,7 +39,7 @@
 
 </head>
 
-<body data-vide-bg="video/swan">
+<body data-vide-bg="video/flyby">
 
 	<!-- scroll to top button begins -->
 	<div class="scroll-top-wrapper">
@@ -78,7 +78,7 @@
 		<a id = "top"></a>
 		<a id = "startchange"></a>
 		<div id = "front-page-greeting">
-			<h1 id = "front-page-logo">Live the way you want at&nbsp;&nbsp;<span style = "border: 3px solid white;"><span style = "font-weight: 700; text-transform: uppercase;">&nbsp;noble</span><span style = "letter-spacing: 0.02em; font-weight: 300; text-transform: uppercase;">park&nbsp;</span></span>&nbsp;.</h1>
+			<h1 id = "front-page-logo"><span style = "border: 3px solid white;"><span style = "font-weight: 700; text-transform: uppercase;">&nbsp;noble</span><span style = "letter-spacing: 0.02em; font-weight: 300; text-transform: uppercase;">park&nbsp;</span></span>&nbsp;Live the way you want.&nbsp;&nbsp;</h1>
 		</div>
 	</div>
 
@@ -256,9 +256,23 @@
 		</section>
 		
 		<section id = "location" data-anchor = "location">
-			<div class = "col-lg-10 col-lg-offset-1">
-				<div id = "location-section-map"></div>
-				<p style = "text-align: center;"><a href = "" onclick = "location-education()">Education</a> | <a href = "" onclick = "location-healthcare()">Healthcare</a> | <a href = "" onclick = "location-transport()">Transport</a> | <a href = "" onclick = "location-lifestyle()">Lifestyle</a> | <a href = "" onclick = "location-eating-out()">Eating Out</a> | <a href = "" onclick = "location-shopping()">Shopping</a></p>
+			<div id = "location-section-wrapper" class = "col-lg-10 col-lg-offset-1">
+
+				<div id = "location-section-map">
+				</div>
+
+				<div id = "location-section-overlay">
+					<div class = "round-photo" id = "location-round-photo">
+					</div>
+					<h3 id = "overlay-heading"></h3>
+					<p>
+						<ul id = "overlay-list">
+						</ul>
+					</p>
+				</div>	
+
+				<p id = "location-mini-nav"><a onclick = "education()">Education</a> | <a onclick = "healthcare()">Healthcare</a> | <a onclick = "transport()">Transport</a> | <a onclick = "lifestyle()">Lifestyle</a> | <a onclick = "eatingOut()">Eating Out</a> | <a onclick = "shopping()">Shopping</a></p>
+
 				<h1>Premium Location</h1>
 				<p>Ideally situated in the heart of cosmopolitan, chic Newmarket, The James is in close proximity to Auckland’s best education, shopping and a host of other amenities.</p>
 				<p>Double grammar zoned, The James is just a few minutes walk to Auckland Grammar School, and within easy access of Epsom Girls Grammar, as well as a number of other schools in the area</p>
@@ -547,6 +561,9 @@
 	
 	<!-- ****** ACCORDION ****** -->
 	<script src = "js/accordion-initializer.js"></script>
+
+	<!-- ****** LOCATION OVERLAY FUNCTIONS ****** -->
+	<script src = "js/location-overlay-functions.js"></script>
 	
 	<!-- ****** FOTORAMA FULL SCREEN CONTAIN ADJUSTMENT BEGINS ****** -->
 	<script>

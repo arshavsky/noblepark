@@ -9,9 +9,10 @@ function initialize() {
     var map;
     var bounds = new google.maps.LatLngBounds();
     var mapOptions = {
-        draggable: false,
+        draggable: true,
         scrollwheel: false,
         mapTypeId: 'terrain',
+        disableDefaultUI: true,
     };
                     
     // Display a map on the page
