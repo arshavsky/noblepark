@@ -86,7 +86,7 @@
 
 		<section id = "building" data-anchor = "building">
 			<div class = "col-lg-10 col-lg-offset-1">
-				<div class = "fotorama" data-width = "100%" data-fit = "cover" data-allowfullscreen = "true" data-transition="crossfade" data-loop="true" data-navposition="bottom" data-ratio = "2.35/1" data-trackpad = "true" data-swipe = "true" data-auto = "false" data-autoplay = "false">
+				<div class = "fotorama" data-width = "100%" data-fit = "cover" data-allowfullscreen = "true" data-transition="crossfade" data-loop="true" data-navposition="bottom" data-ratio = "2.35/1" data-trackpad = "false" data-swipe = "true" data-auto = "false" data-autoplay = "false">
 					<img src = "img/section-building/day-time.jpg" data-caption = "Click top right corner to view full screen"></img>
 					<img src = "img/section-building/night-time.jpg" data-caption = "Click top right corner to view full screen"></img>
 					<img src = "img/section-building/lobby.jpg" data-caption = "Click top right corner to view full screen"></img>
@@ -102,7 +102,7 @@
 		<section id = "apartments" data-anchor = "apartments">
 
 			<div class = "col-lg-10 col-lg-offset-1">
-				<div class = "fotorama" data-width = "100%" data-fit = "cover" data-allowfullscreen = "true" data-transition="crossfade" data-loop="true" data-navposition="bottom" data-fit = "contain" data-ratio = "2.35/1" data-trackpad = "true" data-swipe = "true" data-auto = "false" data-autoplay = "false">
+				<div class = "fotorama" data-width = "100%" data-fit = "cover" data-allowfullscreen = "true" data-transition="crossfade" data-loop="true" data-navposition="bottom" data-fit = "contain" data-ratio = "2.35/1" data-trackpad = "false" data-swipe = "true" data-auto = "false" data-autoplay = "false">
 					<img src = "img/section-apartments/panorama.jpg" data-caption = "Panorama"></img>
 					<img src = "img/section-apartments/balcony.jpg" data-caption = "Living"></img>
 					<img src = "img/section-apartments/lounge.jpg" data-caption = "Lounge"></img>
@@ -257,21 +257,20 @@
 		
 		<section id = "location" data-anchor = "location">
 			<div id = "location-section-wrapper" class = "col-lg-10 col-lg-offset-1">
-
-				<div id = "location-section-map">
-				</div>
-
-				<div id = "location-section-overlay">
-					<div class = "round-photo" id = "location-round-photo">
+				
+					<div id = "location-section-map">
 					</div>
-					<h3 id = "overlay-heading"></h3>
-					<p>
-						<ul id = "overlay-list">
-						</ul>
-					</p>
-				</div>	
 
-				<p id = "location-mini-nav"><a onclick = "education()">Education</a> | <a onclick = "healthcare()">Healthcare</a> | <a onclick = "transport()">Transport</a> | <a onclick = "lifestyle()">Lifestyle</a> | <a onclick = "eatingOut()">Eating Out</a> | <a onclick = "shopping()">Shopping</a></p>
+					<div id = "location-section-overlay">
+						<div class = "round-photo" id = "location-round-photo"></div>
+						<h3 id = "overlay-heading"></h3>
+						<p>
+							<ul id = "overlay-list">
+							</ul>
+						</p>
+					</div>	
+
+					<p id = "location-mini-nav"><a onclick = "education(), placeMarkers(educationMarkers, educationIcon)">Education</a> | <a onclick = "healthcare(), placeMarkers(healthCareMarkers, healthcareIcon)">Healthcare</a> | <a onclick = "transport(), placeMarkers(transportMarkers, transportIcon)">Transport</a> | <a onclick = "lifestyle(), placeMarkers(lifestyleMarkers, lifestyleIcon)">Lifestyle</a> | <a onclick = "eatingOut(), placeMarkers(eatingOutMarkers, eatingOutIcon)">Eating Out</a> | <a onclick = "shopping(), placeMarkers(shoppingMarkers, shoppingIcon)">Shopping</a></p>
 
 				<h1>Premium Location</h1>
 				<p>Ideally situated in the heart of cosmopolitan, chic Newmarket, The James is in close proximity to Auckland’s best education, shopping and a host of other amenities.</p>
@@ -557,7 +556,7 @@
 	<script src = "http://maps.google.com/maps/api/js?sensor=false"></script>
 	<script src = "js/insert-map.js"></script>
 	<script src = "js/contact-section-black-and-white-map.js"></script>
-	<script src = "js/location-section-map.js"></script>
+	<script src = "js/location-section-map-custom.js"></script>
 	
 	<!-- ****** ACCORDION ****** -->
 	<script src = "js/accordion-initializer.js"></script>

@@ -6,13 +6,16 @@ jQuery(function($) {
 });
 
 function initialize() {
+    
     var map;
+    var nobleParkMarker = new google.maps.LatLng(-36.86048,174.76637);
     var bounds = new google.maps.LatLngBounds();
     var mapOptions = {
         draggable: true,
         scrollwheel: false,
         mapTypeId: 'terrain',
         disableDefaultUI: true,
+        setCenter: (nobleParkMarker),
     };
                     
     // Display a map on the page
@@ -77,14 +80,6 @@ function initialize() {
             }
         })(marker, i));
 
-        // Automatically center the map fitting all markers on the screen
-        map.fitBounds(bounds);
     }
-
-    // Override our map zoom level once our fitBounds function runs (Make sure it only runs once)
-    var boundsListener = google.maps.event.addListener((map), 'bounds_changed', function(event) {
-        this.setZoom(14);
-        google.maps.event.removeListener(boundsListener);
-    });
     
 }

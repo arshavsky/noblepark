@@ -17,5 +17,5 @@ function scrollToTop() {
 	element = $('body');
 	offset = element.offset();
 	offsetTop = offset.top;
-	$('html, body').animate({scrollTop: offsetTop}, 1500, 'swing');
+	$('html, body').animate({scrollTop: offsetTop}, 1000, 'swing');
 }

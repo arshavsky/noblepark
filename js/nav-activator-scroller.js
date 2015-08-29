@@ -26,7 +26,7 @@ $('nav a').on('click', function() {
 
     $('body,html').animate({
         scrollTop: scrollPoint
-    }, 1500);
+    }, 500);
 
     return false;
 
