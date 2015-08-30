@@ -1,7 +1,27 @@
 // Global Variables
 var nobleLatLang = new google.maps.LatLng(-36.86048, 174.76637); // fucking obvious what it is anyway
+var nobleBillBoardLatLAng = new google.maps.LatLng(-36.860515, 174.763148); // still following I hope?
 var placedMarkers = []; // to keep track of markers placed on the map
 var numberOfMarkers; // to keep track of the number of markers placed on the map
+
+// Style the map
+var styles = [ 
+	{   featureType: "road", 
+	    elementType: "labels.icon", 
+		stylers: [ 
+			{ saturation: 1 }, 
+			{ gamma: 1 }, 
+			{ visibility: "on" }, 
+			{ hue: "#52CC29" } 
+		] 
+	},
+
+	{ elementType: "geometry", 
+	  	stylers: [ 
+			{ "saturation": -100 }
+		]
+	} 
+];
 
 // Education Markers
 var educationMarkers = [
@@ -63,15 +83,28 @@ var shoppingMarkers = [
 var map = new google.maps.Map(document.getElementById('location-section-map'), {
     center: nobleLatLang,
     zoom: 14,
+    mapTypeId: google.maps.MapTypeId.ROADMAP,
+    backgroundColor:"#eeeeee",
+    scrollwheel: false,
+    mapTypeControl:false,
+    disableDefaultUI: true,
+    /*zoomControlOptions: {
+		style: google.maps.ZoomControlStyle.SMALL,
+        position: google.maps.ControlPosition.RIGHT_CENTER
+	},
+	panControlOptions: {
+		position: google.maps.ControlPosition.RIGHT_BOTTOM 
+	}*/	
   });
 
 // Chuck a permanent marker on the aforementioned map to show Noble's position
-var nobleIconBillBoard = new google.maps.MarkerImage('img/section-contact/marker-noble-park.png',null,null, null,new google.maps.Size(60, 45));  
+var nobleIcon = new google.maps.MarkerImage('img/section-location/dotPlusBillBoard.png',null,null, null,new google.maps.Size(150, 23));
 
 var nobleMarker = new google.maps.Marker({
 	map: map,
 	position: nobleLatLang,
-	icon: nobleIconBillBoard
+	icon: nobleIcon,
+	title: "Noble Park Residences"
 });
 
 // Remove existing markers from the Map
@@ -97,7 +130,8 @@ function placeMarkers(markersArray, iconType) {
 		marker = new google.maps.Marker({
 			map: map,
 			position: {lat: markersArray[i][1], lng: markersArray[i][2]},
-			icon: iconType
+			icon: iconType,
+			title: markersArray[i][0]
 		});
 
 		// Keep reference of placed markers
@@ -117,4 +151,5 @@ map.fitBounds(bounds);
 
 };
 
+map.setOptions({styles: styles}); // Apply styles on load
 placeMarkers(educationMarkers, educationIcon); // Show educationMarkers on load
