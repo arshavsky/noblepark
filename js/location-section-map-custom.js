@@ -18,7 +18,7 @@ var styles = [
 
 	{ elementType: "geometry", 
 	  	stylers: [ 
-			{ "saturation": -100 }
+			{ "saturation": 0 }
 		]
 	} 
 ];
@@ -147,6 +147,7 @@ function placeMarkers(markersArray, iconType) {
 	}
 
 bounds.extend(nobleLatLang); // to make sure Noble Park Mark is always shown
+google.maps.event.trigger(map, 'resize');
 map.fitBounds(bounds);
 
 };
