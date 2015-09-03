@@ -594,9 +594,9 @@ footer p {
   background: rgba(0,0,0,0.8);
   z-index: 100;
   opacity: 0;
-  -webkit-transition: opacity 400ms ease-in;
-  -moz-transition: opacity 400ms ease-in;
-  transition: opacity 400ms ease-in;
+  -webkit-transition: opacity 200ms ease-in;
+  -moz-transition: opacity 200ms ease-in;
+  transition: opacity 200ms ease-in;
   pointer-events: none;
 }
 
@@ -635,9 +635,12 @@ footer p {
   background: #b32229; /* Core City Red */; 
 }
  
+.text-menu:hover {
+  cursor: pointer;
+} 
+
 #svg-wrapper {
   padding: 0;
-  margin: 0;
 }
 
  #svg-wrapper p{
@@ -651,9 +654,8 @@ footer p {
  }
 
 #svg-overlays {
-  background: url(../img/section-floorplans/level-3-2.png); 
-  width: 100%;
-  background-size: cover;
+  background: url(../img/section-floorplans/levelOne.png);
+  background-size: contain;
   background-repeat: no-repeat;
   top: 0;
   right: 0;
@@ -662,6 +664,7 @@ footer p {
 }
 
 #round-level-icon-holder {
+  background-color: red;
   padding: 0;
 }
 
@@ -712,26 +715,26 @@ footer p {
 
 #level-6 {
   background: url(../img/section-floorplans/cross-section-level-6.png);
-  background-size: contain;
+  background-size: cover;
   background-repeat: no-repeat;
   overflow: auto;
 }
 
 #level-5 {
   background: url(../img/section-floorplans/cross-section-level-5.png);
-  background-size: contain;
+  background-size: cover;
   background-repeat: no-repeat;
 }
 
 #level-4 {
   background: url(../img/section-floorplans/cross-section-level-4.png);
-  background-size: contain;
+  background-size: cover;
   background-repeat: no-repeat;
 }
 
 #level-3 {
   background: url(../img/section-floorplans/cross-section-level-3.png);
-  background-size: contain;
+  background-size: cover;
   background-repeat: no-repeat;
   overflow: auto;
   opacity: 1.0;
@@ -739,14 +742,14 @@ footer p {
 
 #level-2 {
   background: url(../img/section-floorplans/cross-section-level-2.png);
-  background-size: contain;
+  background-size: cover;
   background-repeat: no-repeat;
   overflow: auto;
 }
 
 #level-1 {
   background: url(../img/section-floorplans/cross-section-level-1.png);
-  background-size: contain;
+  background-size: cover;
   background-repeat: no-repeat;
   overflow: auto;
 }

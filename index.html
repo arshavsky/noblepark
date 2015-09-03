@@ -49,7 +49,7 @@
 	</div>
 	<!-- scroll to top button ends -->
 
-	<!-- NAVIGATION BEGINS -->
+	<!-- ********************************************* START NAVIGATION ********************************************************** -->
 	<nav class = "navbar navbar-inverse navbar-fixed-top"  id = "navbar">
 		<div class = "container-fluid">
 			<div class = "navbar-header">
@@ -72,8 +72,12 @@
 			</div>	
 		</div>
 	</nav>
-	<!-- NAVIGATION ENDS -->
+	<!-- ********************************************* STOP NAVIGATION *********************************************************** -->
 
+
+
+
+	<!-- ********************************************* START FRONT PAGE LOGO ***************************************************** -->
 	<div id = "top-of-page">
 		<a id = "top"></a>
 		<a id = "startchange"></a>
@@ -81,24 +85,39 @@
 			<h1 id = "front-page-logo"><span style = "border: 3px solid white;"><span style = "font-weight: 700; text-transform: uppercase;">&nbsp;noble</span><span style = "letter-spacing: 0.02em; font-weight: 300; text-transform: uppercase;">park&nbsp;</span></span>&nbsp;Live the way you want.&nbsp;&nbsp;</h1>
 		</div>
 	</div>
+	<!-- ********************************************* STOP FRONT PAGE LOGO ****************************************************** -->
+
+
 
 	<div id = "page" class = "container-fluid">
 
+		<!-- ***************************************** START BUILDING SECTION **************************************************** -->
 		<section id = "building" data-anchor = "building">
 			<div class = "col-lg-10 col-lg-offset-1">
+				
+				<!-- START BUILDING FOTORAMA -->
 				<div class = "fotorama" data-width = "100%" data-fit = "cover" data-allowfullscreen = "true" data-transition="crossfade" data-loop="true" data-navposition="bottom" data-ratio = "2.35/1" data-trackpad = "false" data-swipe = "true" data-auto = "false" data-autoplay = "false">
 					<img src = "img/section-building/day-time.jpg" data-caption = "Click top right corner to view full screen"></img>
 					<img src = "img/section-building/night-time.jpg" data-caption = "Click top right corner to view full screen"></img>
 					<img src = "img/section-building/lobby.jpg" data-caption = "Click top right corner to view full screen"></img>
 					<img src = "img/section-building/view.jpg" data-caption = "Click top right corner to view full screen"></img>
 				</div>
+				<!-- STOP BUILDING FOTORAMA-->
+
+				<!-- START BUILDING DESCRIPTION -->
 				<h1>Boutique development</h1>
 				<p>Award-winning Hulena Architects Limited have teamed with Core City to create The James, a 7 level apartment building on Khyber Pass Road.</p>
 				<p>Located in double Grammar Zone, and walking distance from The University of Auckland’s Newmarket and Grafton Medical School Campuses, The James is perfectly located for education.</p>
 				<p>As with all buildings Core City develops, The James has been designed with a refined living experience in mind. Large apartment sizes, air conditioning throughout and double glazing, combined with hand selected Italian fixtures and fittings, means that The James offers a stylish lifestyle like no other.</p>
+				<!-- STOP BUILDING DESCRIPTION -->
+
 			</div>
 		</section>
+		<!-- ***************************************** STOP BUILDING SECTION ***************************************************** -->
 
+
+
+		<!-- ***************************************** START APARTMENTS SECTION ************************************************** -->
 		<section id = "apartments" data-anchor = "apartments">
 
 			<div class = "col-lg-10 col-lg-offset-1">
@@ -187,7 +206,11 @@
 				</ul>
 			</div>	
 		</section>
+		<!-- ***************************************** STOP APARTMENTS SECTION *************************************************** -->
 		
+
+
+		<!-- ***************************************** START FLOOR PLANS SECTION ************************************************* -->
 		<section id = "floor-plans" data-anchor = "floor-plans">	
 			
 			<!-- START: MODAL WINDOW FOR FLOOR PLANS -->
@@ -200,71 +223,20 @@
 			</div>
 			<!-- STOP: MODAL WINDOW FOR FLOOR PLANS -->
 
-			<div class = "row" style = "min-height: 100vh">	
+				<div class = "col-lg-6 col-lg-offset-3" id = "svg-wrapper">
+					<p class = "text-menu"><span class = "white-back-span"><a onclick = "changeFloorImage('One')">One</a> | <a onclick = "changeFloorImage('Two')">Two</a> | <a onclick = "changeFloorImage('Three')">Three</a> | <a onclick = "changeFloorImage('Four')">Four</a> | <a onclick = "changeFloorImage('Five')">Five</a> | <a onclick = "changeFloorImage('Six')">Six</a> | <a onclick = "changeFloorImage('Seven')">Seven</a></span></p>
+					<p class = "text-menu"><span class = "white-back-span"><a>1-bedroom</a> | <a>2-bedroom</a> | <a>3-bedroom</a> | <a>All</a></p>
 
-				<div class = "col-lg-5 col-lg-offset-1" id = "round-level-icon-holder">
-					<p><span class = "white-back-span">Select one of the floors.</span></p>
-					<div class = "round-level-icon" id = "level-7">
-						<img src = "img/section-floorplans/cross-section-level-7.png" class = "image-sizer"></img>
-					</div>
-					
-					<div class = "round-level-icon" id = "level-6">
-						<img src = "img/section-floorplans/cross-section-level-6.png" class = "image-sizer"></img>
-					</div>
-
-					<div class = "round-level-icon" id = "level-5">
-						<img src = "img/section-floorplans/cross-section-level-5.png" class = "image-sizer"></img>
-					</div>
-
-					<div class = "round-level-icon" id = "level-4">
-						<img src = "img/section-floorplans/cross-section-level-4.png" class = "image-sizer"></img>
-					</div>
-
-					<div class = "round-level-icon" id = "level-3">
-						<img src = "img/section-floorplans/cross-section-level-3.png" class = "image-sizer"></img>
-					</div>
-
-					<div class = "round-level-icon" id = "level-2">
-						<img src = "img/section-floorplans/cross-section-level-2.png" class = "image-sizer"></img>
-					</div>
-
-					<div class = "round-level-icon" id = "level-1">
-						<img src = "img/section-floorplans/cross-section-level-1.png" class = "image-sizer"></img>
-					</div>																				
-				</div>
-
-				<div class = "col-lg-5 col-lg-offset-1" id = "svg-wrapper">
-					<p id = "bedroom-menu"><span class = "white-back-span">Select an apartment.</span></p>
 					<svg id = "svg-overlays" viewBox = "0 0 1000 880">
-						<a xlink:href = "#openModal">
-			  				<polygon class = "apartment-overlay" id = "three-e" points="231,400 415,400 415,486 498,486 498,840 231,840"></polygon>
-			  			</a>
-			  			<a xlink:href = "#openModal">
-			  				<polygon class = "apartment-overlay" id = "three-d" points="580,400 768,400 768,840 502,840 502,486 580,486"></polygon>
-			  			</a>
-			  			<a xlink:href = "#openModal">
-			  				<polygon class = "apartment-overlay" id = "three-c" points="795,358 972,358 972,840 773,840 773,415 795,415"></polygon>
-			  			</a>
-			  			<a xlink:href = "#openModal">
-			  				<polygon class = "apartment-overlay" id = "three-b" points="740,88 972,88 972,353 740,353"></polygon>
-			  			</a>
-			  			<a xlink:href = "#openModal">
-			  				<polygon class = "apartment-overlay" id = "three-a" points="495,88 735,88 735,353 585,353 585,333 553,333 553,242 495,242"></polygon>
-			  			</a>
-			  			<a xlink:href = "#openModal">
-			  				<polygon class = "apartment-overlay" id = "three-h" points="255,88 495,88 495,242 453,242 453,340 420,340 420,353 255,353"></polygon>
-			  			</a>
-			  			<a xlink:href = "#openModal">
-			  				<polygon class = "apartment-overlay" id = "three-g" points="25,88 257,88 257,353 25,353"></polygon>
-			  			</a>
-			  			<a xlink:href = "#openModal">
-			  				<polygon class = "apartment-overlay" id = "three-f" points="25,355 202,355 202,418 225,418 225,840 185,840 25,675"></polygon>
-			  			</a>
-					</svg>	
+					</svg>
+
 				</div>
-			</div>
 		</section>
+		<!-- ***************************************** STOP FLOOR PLANS SECTION ************************************************** -->
 		
+
+
+		<!-- ***************************************** START LOCATION SECTION **************************************************** -->
 		<section id = "location" data-anchor = "location">
 			<div id = "location-section-wrapper" class = "col-lg-10 col-lg-offset-1">
 				<div class = "row" id = "map-container">
@@ -291,7 +263,11 @@
 				<p>Newmarket itself offers over 40 designer fashion stores in the 277 shopping centre complex, Broadway, and the Nuffield and Teed Street shopping areas. Rialto and Event Cinemas, the Olympic Pools and Gym, Auckland Domain, and Lumsden Green offer a range of leisure activities.</p>
 			</div>																	
 		</section>
+		<!-- ***************************************** STOP LOCATION SECTION ***************************************************** -->
 
+
+
+		<!-- ***************************************** START DEVELOPER SECTION *************************************************** -->
 		<section id = "developer" data-anchor = "developer">
 
 			<div class = "col-lg-10 col-lg-offset-1">
@@ -311,7 +287,11 @@
 				<p><a href = "http://www.babbage.co.nz">www.babbage.co.nz</a></p>
 			</div>
 		</section>
+		<!-- ***************************************** STOP DEVELOPER SECTION **************************************************** -->
 		
+
+
+		<!-- ***************************************** START FAQ SECTION ********************************************************* -->
 		<section id = "faq" data-anchor = "faq">
 			<div class = "col-xs-10 col-sm-10 col-md-10 col-lg-10 col-sm-offset-1 col-md-offset-1 col-lg-offset-1">
 				<h1 id = "faq-header">Frequently Asked Questions</h1>
@@ -469,7 +449,11 @@
 				</ul>
 			</div>
 		</section>
+		<!-- ***************************************** STOP FAQ SECTION ********************************************************** -->
 		
+
+
+		<!-- ***************************************** START CONTACT SECTION ***************************************************** -->
 		<section id = "contact" data-anchor = "contact">
 			<div id = "overlay-wrapper" class = "col-xs-10 col-sm-10 col-md-10 col-lg-10 col-sm-offset-1 col-md-offset-1 col-lg-offset-1">
 				<div class "col-xs-10 col-sm-10 col-md-10 col-lg-10">
@@ -517,7 +501,11 @@
 			</div>
 			<div id = "contact-section-map"></div>
 		</section>
+		<!-- ***************************************** STOP CONTACT SECTION ****************************************************** -->
 
+
+
+		<!-- ***************************************** START FOOTER ************************************************************** -->
 		<footer>
 			<div id = "footer-top-left" class = "col-xs-3 col-sm-3 col-md-3 col-lg-3 col-xs-offset-1 col-sm-offset-1 col-md-offset-1 col-lg-offset-1">
 				<h3>Location • Design • Quality</h3>
@@ -541,7 +529,9 @@
 			<div id = "footer-bottom-right" class = "col-xs-3 col-sm-3 col-md-3 col-lg-3 col-xs-offset-4 col-sm-offset-4 col-md-offset-4 col-lg-offset-4">
 				<h3 id = "footer-noble-logo"><span style = "font-weight: 700">NOBLE</span>PARK</h3>
 			</div>	
-		</footer>	
+		</footer>
+		<!-- ***************************************** STOP FOOTER *************************************************************** -->
+			
 	</div>
 	
 	<script src = "jquery-1.11.3.min.js"></script>
@@ -576,6 +566,9 @@
 
 	<!-- ****** LOCATION OVERLAY FUNCTIONS ****** -->
 	<script src = "js/location-overlay-functions.js"></script>
+
+	<!-- ****** FLOOR PLANS FUNCTIONS ****** -->
+	<script src = "js/floorPlansSection.js"></script>	
 	
 	<!-- ****** FOTORAMA FULL SCREEN CONTAIN ADJUSTMENT BEGINS ****** -->
 	<script>
