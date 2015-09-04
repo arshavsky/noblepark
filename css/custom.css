@@ -674,13 +674,13 @@ footer p {
   margin-bottom: 3%;
 }
 .apartment-overlay {
-  opacity: 0;
+  opacity: 0.5;
   transition: 0.25s;
   fill: #b32229; /* Core City Red */
 }
 
 .apartment-overlay:hover {
-  opacity: 0.3;
+  opacity: 0.6;
   cursor: pointer;
 }
 

@@ -27,7 +27,27 @@
 // Change floor image, define new apartment coordinates.
 
 function changeFloorImage(floor) {
-	document.getElementById("svg-overlays").style.background = "url('img/section-floorplans/level" + floor + ".png')";
-	document.getElementById("svg-overlays").style.backgroundSize = "contain";
-	document.getElementById("svg-overlays").style.backgroundRepeat = "no-repeat";
+	
+	// define overlays
+	var overlays = document.getElementById("svg-overlays");
+	var anchor = document.createElementNS("http://www.w3.org/2000/svg", "a");
+	
+	// define a polygon
+	var polygon = document.createElementNS("http://www.w3.org/2000/svg", "polygon");
+	
+	// replace floor image on click
+	overlays.style.background = "url('img/section-floorplans/level" + floor + ".png')";
+	overlays.style.backgroundSize = "contain";
+	overlays.style.backgroundRepeat = "no-repeat";
+
+	// add an anchor
+	anchor.setAttribute("xlink:href", "#openModal");
+	
+	// add a polygon
+	polygon.setAttribute("points", "740,88 972,88 972,353 740,353");
+	polygon.setAttribute("class", "apartment-overlay");
+	// append
+	anchor.appendChild(polygon);
+	overlays.appendChild(anchor);
+
 };
