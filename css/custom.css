@@ -654,9 +654,6 @@ footer p {
  }
 
 #svg-overlays {
-  background: url(../img/section-floorplans/levelOne.png);
-  background-size: contain;
-  background-repeat: no-repeat;
   top: 0;
   right: 0;
   padding: 0;
@@ -674,13 +671,13 @@ footer p {
   margin-bottom: 3%;
 }
 .apartment-overlay {
-  opacity: 0.5;
+  opacity: 0;
   transition: 0.25s;
   fill: #b32229; /* Core City Red */
 }
 
 .apartment-overlay:hover {
-  opacity: 0.6;
+  opacity: 0.3;
   cursor: pointer;
 }
 
