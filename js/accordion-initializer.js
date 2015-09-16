@@ -7,7 +7,7 @@ $(document).ready(function () {
 
 		if (text.is(':hidden')) {
 		text.slideDown('1000');		
-		$(this).children('span').html('-');		
+		$(this).children('span').html('&ndash;');		
 		} else {
 		text.slideUp('1000');
 		$(this).children('span').html('+');		

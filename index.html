@@ -82,7 +82,7 @@
 		<a id = "top"></a>
 		<a id = "startchange"></a>
 		<div id = "front-page-greeting">
-			<h1 id = "front-page-logo"><span style = "border: 3px solid white;"><span style = "font-weight: 700; text-transform: uppercase;">&nbsp;noble</span><span style = "letter-spacing: 0.02em; font-weight: 300; text-transform: uppercase;">park&nbsp;</span></span>&nbsp;Live the way you want.&nbsp;&nbsp;</h1>
+			<h2 id = "front-page-logo"><span style = "border: 3px solid white;"><span style = "font-weight: 700; text-transform: uppercase;">&nbsp;noble</span><span style = "letter-spacing: 0.02em; font-weight: 300; text-transform: uppercase;">park&nbsp;</span></span>&nbsp;Live the way you want.&nbsp;&nbsp;</h2>
 		</div>
 	</div>
 	<!-- ********************************************* STOP FRONT PAGE LOGO ****************************************************** -->
@@ -105,7 +105,7 @@
 				<!-- STOP BUILDING FOTORAMA-->
 
 				<!-- START BUILDING DESCRIPTION -->
-				<h1>Boutique development</h1>
+				<h2>Boutique development</h2>
 				<p>Award-winning Hulena Architects Limited have teamed with Core City to create The James, a 7 level apartment building on Khyber Pass Road.</p>
 				<p>Located in double Grammar Zone, and walking distance from The University of Auckland’s Newmarket and Grafton Medical School Campuses, The James is perfectly located for education.</p>
 				<p>As with all buildings Core City develops, The James has been designed with a refined living experience in mind. Large apartment sizes, air conditioning throughout and double glazing, combined with hand selected Italian fixtures and fittings, means that The James offers a stylish lifestyle like no other.</p>
@@ -130,7 +130,7 @@
 					<img src = "img/section-apartments/bathroom.jpg" data-caption = "Bathroom"></img>
 				</div>
 
-				<h1>Premium Design &amp; Quality</h1>
+				<h2>Premium Design &amp; Quality</h2>
 				<p>The James residences have been designed with form, function and style in mind. Innovative design, lofty 2.7m stud heights and floor to ceiling windows height windows add to the spaciousness of each apartment.</p>
 				<p>Modern- day living has been considerated, with individual air-conditioning systems to each apartment allowing heating or cooling as you desire, along with the latest power saving LED lighting systems. In addition, each unit comes with its own secure, large storage room.</p>
 				<p>The James has been designed with the requirements of the most discerning owners in mind in order to create a modern, elegant, and luxurious home.</p>
@@ -217,15 +217,17 @@
 			<div id = "openModal" class = "modalDialog">
 				<div>
 					<a href="#close" title="Close" class="close">X</a>
-					<h1 id = "apartment-close-up-header"></h1>
-					<img id = "apartment-close-up-image"></img>
+					<p id = "modalParagraph"></p>
+					<div class = "col-xs-12 col-sm-12 col-md-12 col-lg-12" id = "modalImageContainer">
+						<img id = "modalImage"></img>
+					</div>	
 				</div>
 			</div>
 			<!-- STOP: MODAL WINDOW FOR FLOOR PLANS -->
 
 				<div class = "col-lg-6 col-lg-offset-3" id = "svg-wrapper">
-					<p class = "text-menu"><span class = "white-back-span"><a onclick = "changeFloorImage('One', overlaysOne)">One</a> | <a onclick = "changeFloorImage('Two', overlaysTwo)">Two</a> | <a onclick = "changeFloorImage('Three', overlaysThree)">Three</a> | <a onclick = "changeFloorImage('Four', overlaysFour)">Four</a> | <a onclick = "changeFloorImage('Five', overlaysFive)">Five</a> | <a onclick = "changeFloorImage('Six', overlaysSix)">Six</a> | <a onclick = "changeFloorImage('Seven', overlaysSeven)">Seven</a></span></p>
-					<p class = "text-menu"><span class = "white-back-span"><a>1-bedroom</a> | <a>2-bedroom</a> | <a>3-bedroom</a> | <a>All</a></p>
+					<p class = "text-menu"><span class = "white-back-span"><span style = "border-bottom: 3px solid #b32229;"><a onclick = "changeFloorImage('One', overlaysOne)">&nbsp;ONE&nbsp;</a></span>&nbsp;<a onclick = "changeFloorImage('Two', overlaysTwo)">Two</a> <a onclick = "changeFloorImage('Three', overlaysThree)">Three</a> <a onclick = "changeFloorImage('Four', overlaysFour)">Four</a> <a onclick = "changeFloorImage('Five', overlaysFive)">Five</a> <a onclick = "changeFloorImage('Six', overlaysSix)">Six</a> <a onclick = "changeFloorImage('Seven', overlaysSeven)">Seven</a></span></p>
+					<p class = "text-menu"><span class = "white-back-span"><a onmouseover = "opacityAdjust('oneBedroom', 0.3)" onmouseout = "removeStyle('oneBedroom')">&nbsp;1-bedroom&nbsp;</a>&nbsp;<a onmouseover = "opacityAdjust('twoBedroom', 0.3)" onmouseout = "removeStyle('twoBedroom')">&nbsp;2-bedroom&nbsp;</a>&nbsp;<a onmouseover = "opacityAdjust('threeBedroom', 0.3)" onmouseout = "removeStyle('threeBedroom')">&nbsp;3-bedroom&nbsp;</a></p>
 
 					<svg id = "svg-overlays" viewBox = "0 0 1000 880">
 					</svg>
@@ -239,7 +241,9 @@
 		<!-- ***************************************** START LOCATION SECTION **************************************************** -->
 		<section id = "location" data-anchor = "location">
 			<div id = "location-section-wrapper" class = "col-lg-10 col-lg-offset-1">
+				<h1>LOCATION</h1>
 				<div class = "row" id = "map-container">
+					<p id = "location-mini-nav"><a onclick = "education(), placeMarkers(educationMarkers, educationIcon)">Education</a> <a onclick = "healthcare(), placeMarkers(healthCareMarkers, healthcareIcon)">Healthcare</a> <a onclick = "transport(), placeMarkers(transportMarkers, transportIcon)">Transport</a> <a onclick = "lifestyle(), placeMarkers(lifestyleMarkers, lifestyleIcon)">Lifestyle</a> <a onclick = "eatingOut(), placeMarkers(eatingOutMarkers, eatingOutIcon)">Eating Out</a> <a onclick = "shopping(), placeMarkers(shoppingMarkers, shoppingIcon)">Shopping</a></p>
 					<div id = "location-section-map" class = "col-lg-9 col-sm-9 col-xs-9">
 					</div>
 					<div id = "location-section-overlay" class = "col-lg-3 col-sm-3 sol-xs-3">
@@ -254,9 +258,9 @@
 					</div>
 				</div>
 
-				<p id = "location-mini-nav"><a onclick = "education(), placeMarkers(educationMarkers, educationIcon)">Education</a> | <a onclick = "healthcare(), placeMarkers(healthCareMarkers, healthcareIcon)">Healthcare</a> | <a onclick = "transport(), placeMarkers(transportMarkers, transportIcon)">Transport</a> | <a onclick = "lifestyle(), placeMarkers(lifestyleMarkers, lifestyleIcon)">Lifestyle</a> | <a onclick = "eatingOut(), placeMarkers(eatingOutMarkers, eatingOutIcon)">Eating Out</a> | <a onclick = "shopping(), placeMarkers(shoppingMarkers, shoppingIcon)">Shopping</a></p>
+		
 
-				<h1>Premium Location</h1>
+				<h2>Premium Location</h2>
 				<p>Ideally situated in the heart of cosmopolitan, chic Newmarket, The James is in close proximity to Auckland’s best education, shopping and a host of other amenities.</p>
 				<p>Double grammar zoned, The James is just a few minutes walk to Auckland Grammar School, and within easy access of Epsom Girls Grammar, as well as a number of other schools in the area</p>
 				<p>The James is directly across the road from the University of Auckland Newmarket Campus, and a short walk to the University of Auckland medical campus in Grafton. Auckland, Mercy, and Starship Hospitals are all within walking distance. Motorway on ramps to northern, southern and western motorways are a 3 minute drive away. The James has two bus stops leading in both directions directly outside the building, and Grafton Train Station is less than a 3 minute walk.</p>
@@ -271,18 +275,19 @@
 		<section id = "developer" data-anchor = "developer">
 
 			<div class = "col-lg-10 col-lg-offset-1">
+				<h1 style = "text-align:center; letter-spacing: 3px;">DEVELOPER</h1>
 				<img id = "section-developer-img" src = "img/section-developer/core-city-team-wide-color.png" alt = "The Core City Team"></img>
 			</div>	
 
 			<div id = "section-developer-wrapper" class = "col-xs-10 col-sm-10 col-md-10 col-lg-10 col-sm-offset-1 col-md-offset-1 col-lg-offset-1">	
 
-				<h1>Core City Group <sup>developer</sup></h1>
+				<h2>Core City Group <sup>developer</sup></h2>
 				<p>Core City Group is a tight knit, well-qualified team with diverse backgrounds and knowledge bases. United by a love of property, and a passion for quality, innovation and design, the team works closely together in order to achieve the best results possible. Fastidious and with great attention to detail, Core City pride themselves on building quality buildings, and establishing and maintaining strong relationships with their tenants.</p>
 				<p><a href = "http://www.corecity.co.nz">www.corecity.co.nz</a></p>
-				<h1>Hulena Architects <sup>architect</sup></h1>
+				<h2>Hulena Architects <sup>architect</sup></h2>
 				<p>Hulena Architects was founded by Brent Hulena in 1991. Brent has practiced as an Architect for 28 years and is a Registered Member and Associate of the New Zealand Institute of Architects and the Australian Institute of Architects.</br>Hulena Architects is a successful and innovative architectural practice that produces a diverse range of architectural work, much of which is recognized through publication and awards. Projects include commercial, retail, hotels, medical buildings, apartment buildings, terrace houses, individual residential dwellings and beach houses. Our projects are realized throughout New Zealand, Australia and the Pacific region.</br>Such a variety of commissions ensures Hulena Architects remain challenged and committed to innovative design. The company’s unique design solutions are the result of carefully interpreting clients’ requirements, lifestyle, budget and a though exploration of the site potential. Repeat commissions from regular clientele and longstanding associations are evidence of the strength, relevance and success of our service to our clients.</p>
 				<p><a href = "http://www.hulena.com">www.hulena.com</a></p>
-				<h1>Babbage Consultants <sup>structural engineer</sup></h1>
+				<h2>Babbage Consultants <sup>structural engineer</sup></h2>
 				<p>Babbage Consultants is a well-established, leading national design practice offering creativity and experience to clients across a wide range of sectors for over 75 years. Babbage draws on this extensive experience to consistently provide effective solutions to clients throughout Australasia.</br>Babbage team members are carefully selected for their client-focus, capability and innovative thinking. They are highly skilled and qualified professional leaders in the fields of Architecture, Project Management, Engineering and Surveying.</p>
 				<p><a href = "http://www.babbage.co.nz">www.babbage.co.nz</a></p>
 			</div>
@@ -294,7 +299,7 @@
 		<!-- ***************************************** START FAQ SECTION ********************************************************* -->
 		<section id = "faq" data-anchor = "faq">
 			<div class = "col-xs-10 col-sm-10 col-md-10 col-lg-10 col-sm-offset-1 col-md-offset-1 col-lg-offset-1">
-				<h1 id = "faq-header">Frequently Asked Questions</h1>
+				<h1 style = "text-align:center; letter-spacing: 3px;">FAQ</h1>
 				<ul class="toggle">
 					<li>
 						<h3>What's in the area?</h3>
