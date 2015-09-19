@@ -58,8 +58,18 @@ function defineModalWindowContents(overlayID) {
 	document.getElementById("modalImage").src = "img/section-floorplans/" + overlayID + ".png";
 };
 
+// Helper: Handles the Menu
+function makeActive(currentItem, totalItems) {
+
+	for (i = 1; i <= totalItems; i ++) {
+		document.getElementById("item-"+i).style.borderBottom = "none";
+	}
+
+	document.getElementById("item-"+currentItem).style.borderBottom = "3px solid #b32229";
+}
+
 // Start Function
-function changeFloorImage(floor, array) {
+function changeFloorImage(floor, array, currentItem, totalItems) {
 
 	// Remove Existing Overlays Onclick
 	overlays.innerHTML = "";
@@ -96,6 +106,8 @@ function changeFloorImage(floor, array) {
 
 	}; // End For Loop
 
+	makeActive(currentItem, totalItems);
+
 }; // End Function
 
 
@@ -118,8 +130,7 @@ function removeStyle (inputVar) {
 		allSuchClass[i].removeAttribute("style");
 	};
 };
+
 // Run Function on Page Load for L1 arrays and Images
-window.onload = changeFloorImage('Three', overlaysThree); 
-
-
+window.onload = changeFloorImage('Six', overlaysSix, 6, 7); 
 

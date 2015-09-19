@@ -226,8 +226,31 @@
 			<!-- STOP: MODAL WINDOW FOR FLOOR PLANS -->
 
 				<div class = "col-lg-6 col-lg-offset-3" id = "svg-wrapper">
-					<p class = "text-menu"><span class = "white-back-span"><span style = "border-bottom: 3px solid #b32229;"><a onclick = "changeFloorImage('One', overlaysOne)">&nbsp;ONE&nbsp;</a></span>&nbsp;<a onclick = "changeFloorImage('Two', overlaysTwo)">Two</a> <a onclick = "changeFloorImage('Three', overlaysThree)">Three</a> <a onclick = "changeFloorImage('Four', overlaysFour)">Four</a> <a onclick = "changeFloorImage('Five', overlaysFive)">Five</a> <a onclick = "changeFloorImage('Six', overlaysSix)">Six</a> <a onclick = "changeFloorImage('Seven', overlaysSeven)">Seven</a></span></p>
-					<p class = "text-menu"><span class = "white-back-span"><a onmouseover = "opacityAdjust('oneBedroom', 0.3)" onmouseout = "removeStyle('oneBedroom')">&nbsp;1-bedroom&nbsp;</a>&nbsp;<a onmouseover = "opacityAdjust('twoBedroom', 0.3)" onmouseout = "removeStyle('twoBedroom')">&nbsp;2-bedroom&nbsp;</a>&nbsp;<a onmouseover = "opacityAdjust('threeBedroom', 0.3)" onmouseout = "removeStyle('threeBedroom')">&nbsp;3-bedroom&nbsp;</a></p>
+
+				<!-- START: NAV FLOOR PLANS -->	
+				<p class = "text-menu">
+					<a onclick = "changeFloorImage('One', overlaysOne, 1, 7)">
+							<span id = "item-1">&nbsp;One&nbsp;</span></a>
+					<a onclick = "changeFloorImage('Two', overlaysTwo, 2, 7)">
+							<span id = "item-2">&nbsp;Two&nbsp;</span></a>
+					<a onclick = "changeFloorImage('Three', overlaysThree, 3, 7)">
+							<span id = "item-3">&nbsp;Three&nbsp;</span></a>
+					<a onclick = "changeFloorImage('Four', overlaysFour, 4, 7)">
+							<span id = "item-4">&nbsp;Four&nbsp;</span></a>
+					<a onclick = "changeFloorImage('Five', overlaysFive, 5, 7)">
+							<span id = "item-5">&nbsp;Five&nbsp;</span></a>
+					<a onclick = "changeFloorImage('Six', overlaysSix, 6, 7)">
+							<span id = "item-6">&nbsp;Six&nbsp;</span></a> 
+					<a onclick = "changeFloorImage('Seven', overlaysSeven, 7, 7)">
+							<span id = "item-7">&nbsp;Seven&nbsp;</span></a>
+				</p>
+				<!-- STOP: NAV FLOOR PLANS -->
+
+					<p class = "text-menu" id = "x-bedroom">
+							<a onmouseover = "opacityAdjust('oneBedroom', 0.3)" onmouseout = "removeStyle('oneBedroom')">&nbsp;1-bedroom&nbsp;</a>&nbsp;
+							<a onmouseover = "opacityAdjust('twoBedroom', 0.3)" onmouseout = "removeStyle('twoBedroom')">&nbsp;2-bedroom&nbsp;</a>&nbsp;
+							<a onmouseover = "opacityAdjust('threeBedroom', 0.3)" onmouseout = "removeStyle('threeBedroom')">&nbsp;3-bedroom&nbsp;</a>
+					</p>	
 
 					<svg id = "svg-overlays" viewBox = "0 0 1000 880">
 					</svg>

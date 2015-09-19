@@ -636,15 +636,35 @@ footer p {
   color: white;
   background: #b32229; /* Core City Red */; 
 }
- 
+
+.text-menu {
+  letter-spacing: 1px;
+}
+
 .text-menu:hover {
   cursor: pointer;
 }
 
-.text-menu a:hover {
-  text-decoration: none;
+.text-menu a {
+  color: gray;
 } 
 
+.text-menu a:hover {
+  text-decoration: none;
+}
+
+.text-menu span {
+  -o-transition:0.25s;
+  -ms-transition:0.25s;
+  -moz-transition:0.25s;
+  -webkit-transition:0.25s;
+  transition:0.25s;
+}
+
+#x-bedroom a:hover {
+  color: black;
+}
+ 
 #svg-wrapper {
   padding: 0;
 }
@@ -655,15 +675,16 @@ footer p {
   text-align: center;
  }
 
-.white-back-span {
-  background-color: #ffffff;
- }
-
 #svg-overlays {
   top: 0;
   right: 0;
   padding: 0;
   margin: 0;
+  -o-transition:0.10s;
+  -ms-transition:0.10s;
+  -moz-transition:0.10s;
+  -webkit-transition:0.10s;
+  transition:0.10s;
 }
 
 #round-level-icon-holder {
