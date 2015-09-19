@@ -2,9 +2,13 @@
 var overlays = document.getElementById("svg-overlays");
 
 // Define Overlay Arrays
-var overlaysOne = ["retailOne", "120,100 300,100 300,200 120,200", "retail", "retailTwo", "700,88 850,88 850,200 700,200", "retail"];
+var overlaysOne = [
+"retailOne", "120,92 315,92 315,197 120,197", "retail", 
+"retailTwo", "690,92 878,92 878,197 690,197", "retail"];
 
-var overlaysTwo = ["retailOne", "120,100 300,100 300,400 120,400", "retail", "retailTwo", "700,88 850,88 850,353 700,353", "retail"];
+var overlaysTwo = [
+"retailOne", "120,92 315,92 315,345 240,345 240,420 205,420 205,391 120,391", "retail", 
+"retailTwo", "688,92 878,92 878,417 785,417 785,345 688,345", "retail"];
 
 var overlaysThree = [
 "threeD", "580,340 715,340 715,695 500,695 500,410 580,410", "oneBedroom",
@@ -16,25 +20,37 @@ var overlaysThree = [
 "threeB", "690,95 874,95 874,310 690,310", "oneBedroom",
 "threeC", "735,310 874,310 874,695 715,695 715,354 735,354", "oneBedroom"];
 
-var overlaysFour = ["fourD", "100,88 300,88 300,500 100,500", "threeBedroom",
-"fourE", "330,88 450,88 450,330 330,330", "oneBedroom", "fourF", "530,88 630,88 630,300 530,300", "oneBedroom",
-"fourA", "730,88 850,88 850,600 730,600", "threeBedroom", "fourB", "580,350 700,350 700,500 580,500", "oneBedroom",
-"fourC", "330,350 450,350 450,550 330,550"];
+var overlaysFour = [
+"fourD", "125,92 310,92 310,312 320,312 320,342 283,342 283,577 125,577", "threeBedroom",
+"fourE", "310,92 498,92 498,220 463,220 463,290 434,290 434,310 310,310", "oneBedroom",
+"fourF", "498,92 690,92 690,310 566,310 566,286 543,286 543,220 498,220", "oneBedroom",
+"fourA", "690,92 875,92 875,577 715,577 715,340 677,340 677,310 690,310", "threeBedroom",
+"fourB", "580,340 715,340 715,577 500,577 500,410 580,410", "oneBedroom",
+"fourC", "284,340 430,340 430,410 500,410 500,577 284,577", "oneBedroom"];
 
-var overlaysFive = ["fiveD", "100,88 300,88 300,500 100,500", "threeBedroom",
-"fiveE", "330,88 450,88 450,330 330,330", "oneBedroom", "fiveF", "530,88 630,88 630,300 530,300", "oneBedroom",
-"fiveA", "730,88 850,88 850,600 730,600", "threeBedroom", "fiveB", "580,350 700,350 700,500 580,500", "oneBedroom",
-"fiveC", "330,350 450,350 450,550 330,550", "oneBedroom"];
+var overlaysFive = [
+"fiveD", "125,92 310,92 310,312 320,312 320,342 283,342 283,545 125,545", "threeBedroom",
+"fiveE", "310,92 498,92 498,220 463,220 463,290 434,290 434,310 310,310", "oneBedroom",
+"fiveF", "498,92 690,92 690,310 566,310 566,286 543,286 543,220 498,220", "oneBedroom",
+"fiveA", "690,92 875,92 875,545 715,545 715,340 677,340 677,310 690,310", "threeBedroom",
+"fiveB", "580,340 715,340 715,545 500,545 500,410 580,410", "oneBedroom",
+"fiveC", "284,340 430,340 430,410 500,410 500,545 284,545", "oneBedroom"];
 
-var overlaysSix = ["sixD", "100,88 300,88 300,500 100,500", "oneBedroom",
-"sixE", "330,88 450,88 450,330 330,330", "twoBedroom", "sixSevenF", "530,88 630,88 630,300 530,300", "threeBedroom",
-"sixSevenA", "730,88 850,88 850,600 730,600", "threeBedroom", "sixB", "580,350 700,350 700,500 580,500", "twoBedroom",
-"sixC", "330,350 450,350 450,550 330,550", "oneBedroom"];
+var overlaysSix = [
+"sixE", "121,92 245,92 245,310 335,310 335,340 310,340 310,544 121,544", "twoBedroom",
+"sixSevenF", "245,92 500,92 500,230 470,230 470,292 440,292 440,313 245,313", "threeBedroom",
+"sixSevenA", "500,92 755,92 755,313 566,313 566,292 534,292 534,258 540,258 540,225 500,225", "threeBedroom",
+"sixB", "755,92 877,92 877,544 690,544 690,340 665,340 665,310 755,310", "twoBedroom",
+"sixD", "310,340 435,340 435,410 500,410 500,545 310,545", "oneBedroom",
+"sixC", "575,340 690,340 690,545 500,545 500,410 575,410","oneBedroom",
+];
 
-var overlaysSeven = ["sevenC", "120,88 300,88 300,500 120,500", "threeBedroom",
-"sevenA", "400,88 630,88 630,250 400,250", "twoBedroom",
-"sevenB", "720,88 850,88 850,550 720,550", "threeBedroom", "sixSevenA", "580,350 700,350 700,500 580,500", "threeBedroom",
-"sixSevenF", "330,350 450,350 450,550 330,550", "threeBedroom"];
+var overlaysSeven = [
+"sevenC", "120,92 325,92 325,280 310,283 310,370 283,370 283,552 120,552", "threeBedroom",
+"sevenA", "325,92 673,92 673,252 540,250 540,225 468,225 468,250 325,250", "twoBedroom",
+"sevenB", "673,92 879,92 879,552 718,552 718,370 690,370 690,280 673,280", "threeBedroom",
+"sixSevenA", "560,283 690,283 690,370 718,370 718,552 500,552 500,410 577,410 577,335 560,335", "threeBedroom",
+"sixSevenF", "310,283 435,283 435,410 500,410 500,552 283,552 283,370 310,370", "threeBedroom"];
 
 // Defines Modal Window Contents, Used by changeFloorImage Function
 function defineModalWindowContents(overlayID) {
@@ -104,3 +120,6 @@ function removeStyle (inputVar) {
 };
 // Run Function on Page Load for L1 arrays and Images
 window.onload = changeFloorImage('Three', overlaysThree); 
+
+
+
