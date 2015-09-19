@@ -491,6 +491,7 @@ footer p {
 
 #location-mini-nav {
   text-align: center;
+  margin-bottom: 20px;
 }
 
 #location-mini-nav a:hover {
@@ -623,6 +624,33 @@ footer p {
 .modalDialog img {
   display: block;
   margin: auto;
+}
+
+.modalDialog ul {
+  display: inline-block;
+  list-style: circle;
+  color: #3e3e3e;
+  font-size: 0.9em;  
+  line-height: 1.5em;
+  font-weight: 300 !important;
+}
+
+.modalDialog h2, h3 {
+  display: inline-block;
+  padding: 0;
+  line-height: 30px;
+}
+
+#headerHolder {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+#modalStatus {
+  text-align: right;
+  text-transform: uppercase;
+  padding: 0;
 }
 
 .close {

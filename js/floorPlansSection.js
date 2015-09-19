@@ -52,12 +52,74 @@ var overlaysSeven = [
 "sixSevenA", "560,283 690,283 690,370 718,370 718,552 500,552 500,410 577,410 577,335 560,335", "threeBedroom",
 "sixSevenF", "310,283 435,283 435,410 500,410 500,552 283,552 283,370 310,370", "threeBedroom"];
 
-var threeA = ["Under Contract", "1 Bedroom", "1 Bathroom", "Apartment Area: 51.92", "Deck Area: 5.63", "Total Area: 58", "Storage Room: 5.9"]
+var modalWindowFillerArray = [
+"threeA", "Three A", 2, "1 Bedroom", "1 Bathroom", "Apartment Area: 51.92", "Deck Area: 5.63", "Total Area: 58", "Storage Room: 5.9",
+"threeB", "Three B", 1, "1 Bedroom & 1 Study", "1 Bathroom", "Apartment Area: 51.92", "Deck Area: 5.63", "Total Area: 58", "Storage Room: 5.9",
+"threeC", "Three C", 3, "1 Bedroom", "1 Bathroom", "Apartment Area: 51.92", "Deck Area: 5.63", "Total Area: 58", "Storage Room: 5.9",
+"threeD", "Three D", 2, "1 Bedroom", "1 Bathroom", "Apartment Area: 51.92", "Deck Area: 5.63", "Total Area: 58", "Storage Room: 5.9",
+"threeE", "Three E", 1, "1 Bedroom", "1 Bathroom", "Apartment Area: 51.92", "Deck Area: 5.63", "Total Area: 58", "Storage Room: 5.9",
+"threeF", "Three F", 2, "1 Bedroom", "1 Bathroom", "Apartment Area: 51.92", "Deck Area: 5.63", "Total Area: 58", "Storage Room: 5.9",
+"threeG", "Three G", 3, "1 Bedroom", "1 Bathroom", "Apartment Area: 51.92", "Deck Area: 5.63", "Total Area: 58", "Storage Room: 5.9",
+"threeH", "Three H", 1, "1 Bedroom", "1 Bathroom", "Apartment Area: 51.92", "Deck Area: 5.63", "Total Area: 58", "Storage Room: 5.9",
+
+"fourA", "Four A", 2, "1 Bedroom", "1 Bathroom", "Apartment Area: 51.92", "Deck Area: 5.63", "Total Area: 58", "Storage Room: 5.9",
+"fourB", "Four B", 1, "1 Bedroom & 1 Study", "1 Bathroom", "Apartment Area: 51.92", "Deck Area: 5.63", "Total Area: 58", "Storage Room: 5.9",
+"fourC", "Four C", 3, "1 Bedroom", "1 Bathroom", "Apartment Area: 51.92", "Deck Area: 5.63", "Total Area: 58", "Storage Room: 5.9",
+"fourD", "Four D", 2, "1 Bedroom", "1 Bathroom", "Apartment Area: 51.92", "Deck Area: 5.63", "Total Area: 58", "Storage Room: 5.9",
+"fourE", "Four E", 1, "1 Bedroom", "1 Bathroom", "Apartment Area: 51.92", "Deck Area: 5.63", "Total Area: 58", "Storage Room: 5.9",
+"fourF", "Four F", 2, "1 Bedroom", "1 Bathroom", "Apartment Area: 51.92", "Deck Area: 5.63", "Total Area: 58", "Storage Room: 5.9",
+
+"fiveA", "Five A", 2, "1 Bedroom", "1 Bathroom", "Apartment Area: 51.92", "Deck Area: 5.63", "Total Area: 58", "Storage Room: 5.9",
+"fiveB", "Five B", 1, "1 Bedroom & 1 Study", "1 Bathroom", "Apartment Area: 51.92", "Deck Area: 5.63", "Total Area: 58", "Storage Room: 5.9",
+"fiveC", "Five C", 3, "1 Bedroom", "1 Bathroom", "Apartment Area: 51.92", "Deck Area: 5.63", "Total Area: 58", "Storage Room: 5.9",
+"fiveD", "Five D", 2, "1 Bedroom", "1 Bathroom", "Apartment Area: 51.92", "Deck Area: 5.63", "Total Area: 58", "Storage Room: 5.9",
+"fiveE", "Five E", 1, "1 Bedroom", "1 Bathroom", "Apartment Area: 51.92", "Deck Area: 5.63", "Total Area: 58", "Storage Room: 5.9",
+"fiveF", "Five F", 2, "1 Bedroom", "1 Bathroom", "Apartment Area: 51.92", "Deck Area: 5.63", "Total Area: 58", "Storage Room: 5.9",
+
+"sixSevenA", "Six/Seven A", 2, "1 Bedroom", "1 Bathroom", "Apartment Area: 51.92", "Deck Area: 5.63", "Total Area: 58", "Storage Room: 5.9",
+"sixB", "Six B", 1, "1 Bedroom & 1 Study", "1 Bathroom", "Apartment Area: 51.92", "Deck Area: 5.63", "Total Area: 58", "Storage Room: 5.9",
+"sixC", "Six C", 3, "1 Bedroom", "1 Bathroom", "Apartment Area: 51.92", "Deck Area: 5.63", "Total Area: 58", "Storage Room: 5.9",
+"sixD", "Six D", 2, "1 Bedroom", "1 Bathroom", "Apartment Area: 51.92", "Deck Area: 5.63", "Total Area: 58", "Storage Room: 5.9",
+"sixE", "Six E", 1, "1 Bedroom", "1 Bathroom", "Apartment Area: 51.92", "Deck Area: 5.63", "Total Area: 58", "Storage Room: 5.9",
+"sixSevenF", "Six/Seven F", 2, "1 Bedroom", "1 Bathroom", "Apartment Area: 51.92", "Deck Area: 5.63", "Total Area: 58", "Storage Room: 5.9",
+
+"sevenA", "Seven A", 2, "1 Bedroom", "1 Bathroom", "Apartment Area: 51.92", "Deck Area: 5.63", "Total Area: 58", "Storage Room: 5.9",
+"sevenB", "Seven B", 1, "1 Bedroom & 1 Study", "1 Bathroom", "Apartment Area: 51.92", "Deck Area: 5.63", "Total Area: 58", "Storage Room: 5.9",
+"sevenC", "Seven C", 3, "1 Bedroom", "1 Bathroom", "Apartment Area: 51.92", "Deck Area: 5.63", "Total Area: 58", "Storage Room: 5.9",
+];
 
 // Defines Modal Window Contents, Used by changeFloorImage Function
 function defineModalWindowContents(overlayID) {
-	document.getElementById("modalParagraph").innerHTML = overlayID;
 	document.getElementById("modalImage").src = "img/section-floorplans/" + overlayID + ".png";
+
+	var currentIndex = modalWindowFillerArray.indexOf(overlayID);
+
+	document.getElementById("modalHeader").innerHTML = "Apartment " + modalWindowFillerArray[(currentIndex + 1)];
+
+	document.getElementById("modalStatus").innerHTML = modalWindowFillerArray[(currentIndex + 2)];
+	
+	if (modalWindowFillerArray[(currentIndex + 2)] == 3) {
+		document.getElementById("modalStatus").style.color = "#b32229";
+		document.getElementById("modalStatus").innerHTML = "Sold";
+	};
+
+	if (modalWindowFillerArray[(currentIndex + 2)] == 2) {
+		document.getElementById("modalStatus").style.color = "#3399FF";
+		document.getElementById("modalStatus").innerHTML = "Under Contract";
+	};
+
+	if (modalWindowFillerArray[(currentIndex + 2)] == 1) {	
+		document.getElementById("modalStatus").style.color = "#82DA82";
+		document.getElementById("modalStatus").innerHTML = "Available";
+	};
+
+	document.getElementById("modalListItem-1").innerHTML = modalWindowFillerArray[(currentIndex + 3)];
+	document.getElementById("modalListItem-2").innerHTML = modalWindowFillerArray[(currentIndex + 4)];
+	document.getElementById("modalListItem-3").innerHTML = modalWindowFillerArray[(currentIndex + 5)];
+	document.getElementById("modalListItem-4").innerHTML = modalWindowFillerArray[(currentIndex + 6)];
+	document.getElementById("modalListItem-5").innerHTML = modalWindowFillerArray[(currentIndex + 7)];
+	document.getElementById("modalListItem-6").innerHTML = modalWindowFillerArray[(currentIndex + 8)];
+
 };
 
 // Helper: Handles the Menu
@@ -134,6 +196,6 @@ function removeStyle (inputVar) {
 };
 
 // Run Function on Page Load for L1 arrays and Images
-window.onload = changeFloorImage('Six', overlaysSix, 6, 7);
+window.onload = changeFloorImage('Three', overlaysThree, 3, 7);
 window.onload = makeActive(1,6,"location"); // Since MakeActive Function is defined here, calling it on behalf of Location Section 
 
