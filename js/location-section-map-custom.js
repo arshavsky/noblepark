@@ -154,3 +154,4 @@ map.fitBounds(bounds);
 
 map.setOptions({styles: styles}); // Apply styles on load
 placeMarkers(educationMarkers, educationIcon); // Show educationMarkers on load
+

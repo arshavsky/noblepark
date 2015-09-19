@@ -217,10 +217,9 @@
 			<div id = "openModal" class = "modalDialog">
 				<div>
 					<a href="#close" title="Close" class="close">X</a>
+					<img id = "modalImage"></img>
+					<h2 id = "modalHeader">Apartment Three B</h2>
 					<p id = "modalParagraph"></p>
-					<div class = "col-xs-12 col-sm-12 col-md-12 col-lg-12" id = "modalImageContainer">
-						<img id = "modalImage"></img>
-					</div>	
 				</div>
 			</div>
 			<!-- STOP: MODAL WINDOW FOR FLOOR PLANS -->
@@ -230,19 +229,19 @@
 				<!-- START: NAV FLOOR PLANS -->	
 				<p class = "text-menu">
 					<a onclick = "changeFloorImage('One', overlaysOne, 1, 7)">
-							<span id = "item-1">&nbsp;One&nbsp;</span></a>
+							<span id = "floorplans-item-1">&nbsp;One&nbsp;</span></a>
 					<a onclick = "changeFloorImage('Two', overlaysTwo, 2, 7)">
-							<span id = "item-2">&nbsp;Two&nbsp;</span></a>
+							<span id = "floorplans-item-2">&nbsp;Two&nbsp;</span></a>
 					<a onclick = "changeFloorImage('Three', overlaysThree, 3, 7)">
-							<span id = "item-3">&nbsp;Three&nbsp;</span></a>
+							<span id = "floorplans-item-3">&nbsp;Three&nbsp;</span></a>
 					<a onclick = "changeFloorImage('Four', overlaysFour, 4, 7)">
-							<span id = "item-4">&nbsp;Four&nbsp;</span></a>
+							<span id = "floorplans-item-4">&nbsp;Four&nbsp;</span></a>
 					<a onclick = "changeFloorImage('Five', overlaysFive, 5, 7)">
-							<span id = "item-5">&nbsp;Five&nbsp;</span></a>
+							<span id = "floorplans-item-5">&nbsp;Five&nbsp;</span></a>
 					<a onclick = "changeFloorImage('Six', overlaysSix, 6, 7)">
-							<span id = "item-6">&nbsp;Six&nbsp;</span></a> 
+							<span id = "floorplans-item-6">&nbsp;Six&nbsp;</span></a> 
 					<a onclick = "changeFloorImage('Seven', overlaysSeven, 7, 7)">
-							<span id = "item-7">&nbsp;Seven&nbsp;</span></a>
+							<span id = "floorplans-item-7">&nbsp;Seven&nbsp;</span></a>
 				</p>
 				<!-- STOP: NAV FLOOR PLANS -->
 
@@ -266,7 +265,22 @@
 			<div id = "location-section-wrapper" class = "col-lg-10 col-lg-offset-1">
 				<h1>LOCATION</h1>
 				<div class = "row" id = "map-container">
-					<p id = "location-mini-nav"><a onclick = "education(), placeMarkers(educationMarkers, educationIcon)">Education</a> <a onclick = "healthcare(), placeMarkers(healthCareMarkers, healthcareIcon)">Healthcare</a> <a onclick = "transport(), placeMarkers(transportMarkers, transportIcon)">Transport</a> <a onclick = "lifestyle(), placeMarkers(lifestyleMarkers, lifestyleIcon)">Lifestyle</a> <a onclick = "eatingOut(), placeMarkers(eatingOutMarkers, eatingOutIcon)">Eating Out</a> <a onclick = "shopping(), placeMarkers(shoppingMarkers, shoppingIcon)">Shopping</a></p>
+					
+					<p class = "text-menu" id = "location-mini-nav">
+						<a onclick = "education(), placeMarkers(educationMarkers, educationIcon), makeActive(1,6,'location')">
+							<span id = "location-item-1">&nbsp;Education&nbsp;</span></a>
+						<a onclick = "healthcare(), placeMarkers(healthCareMarkers, healthcareIcon), makeActive(2,6,'location')">
+							<span id = "location-item-2">&nbsp;Healthcare&nbsp;</span></a>
+						<a onclick = "transport(), placeMarkers(transportMarkers, transportIcon), makeActive(3,6,'location')">
+							<span id = "location-item-3">&nbsp;Transport&nbsp;</span></a>
+						<a onclick = "lifestyle(), placeMarkers(lifestyleMarkers, lifestyleIcon), makeActive(4,6,'location')">
+							<span id = "location-item-4">&nbsp;Lifestyle&nbsp;</span></a>
+						<a onclick = "eatingOut(), placeMarkers(eatingOutMarkers, eatingOutIcon), makeActive(5,6,'location')">
+							<span id = "location-item-5">&nbsp;Eating Out&nbsp;</span></a>
+						<a onclick = "shopping(), placeMarkers(shoppingMarkers, shoppingIcon), makeActive(6,6,'location')">
+							<span id = "location-item-6">&nbsp;Shopping&nbsp;</span></a>
+					</p>
+
 					<div id = "location-section-map" class = "col-lg-9 col-sm-9 col-xs-9">
 					</div>
 					<div id = "location-section-overlay" class = "col-lg-3 col-sm-3 sol-xs-3">

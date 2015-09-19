@@ -52,6 +52,8 @@ var overlaysSeven = [
 "sixSevenA", "560,283 690,283 690,370 718,370 718,552 500,552 500,410 577,410 577,335 560,335", "threeBedroom",
 "sixSevenF", "310,283 435,283 435,410 500,410 500,552 283,552 283,370 310,370", "threeBedroom"];
 
+var threeA = ["Under Contract", "1 Bedroom", "1 Bathroom", "Apartment Area: 51.92", "Deck Area: 5.63", "Total Area: 58", "Storage Room: 5.9"]
+
 // Defines Modal Window Contents, Used by changeFloorImage Function
 function defineModalWindowContents(overlayID) {
 	document.getElementById("modalParagraph").innerHTML = overlayID;
@@ -59,13 +61,13 @@ function defineModalWindowContents(overlayID) {
 };
 
 // Helper: Handles the Menu
-function makeActive(currentItem, totalItems) {
+function makeActive(currentItem, totalItems, sectionName) {
 
 	for (i = 1; i <= totalItems; i ++) {
-		document.getElementById("item-"+i).style.borderBottom = "none";
+		document.getElementById(sectionName + "-item-"+i).style.borderBottom = "none";
 	}
 
-	document.getElementById("item-"+currentItem).style.borderBottom = "3px solid #b32229";
+	document.getElementById(sectionName + "-item-"+currentItem).style.borderBottom = "3px solid #b32229";
 }
 
 // Start Function
@@ -106,7 +108,7 @@ function changeFloorImage(floor, array, currentItem, totalItems) {
 
 	}; // End For Loop
 
-	makeActive(currentItem, totalItems);
+	makeActive(currentItem, totalItems, "floorplans");
 
 }; // End Function
 
@@ -132,5 +134,6 @@ function removeStyle (inputVar) {
 };
 
 // Run Function on Page Load for L1 arrays and Images
-window.onload = changeFloorImage('Six', overlaysSix, 6, 7); 
+window.onload = changeFloorImage('Six', overlaysSix, 6, 7);
+window.onload = makeActive(1,6,"location"); // Since MakeActive Function is defined here, calling it on behalf of Location Section 
 

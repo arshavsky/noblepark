@@ -551,6 +551,11 @@ footer p {
 }
 
 #location-round-photo {
+  -o-transition:0.1s;
+  -ms-transition:0.1s;
+  -moz-transition:0.1s;
+  -webkit-transition:0.1s;
+  transition:0.1s;
   margin: 0 auto !important;
   background-position: center;
  } 
@@ -581,10 +586,7 @@ footer p {
 
 #modalImage {
   width: 500px;
-}
-
-#modalImageContainer {
-  background-size: contain;
+  margin-bottom: 10px;
 }
 
 .modalDialog {
@@ -596,9 +598,9 @@ footer p {
   background: rgba(0,0,0,0.8);
   z-index: 9999999999;
   opacity: 0;
-  -webkit-transition: opacity 200ms ease-in;
-  -moz-transition: opacity 200ms ease-in;
-  transition: opacity 200ms ease-in;
+  -webkit-transition: opacity 80ms ease-out;
+  -moz-transition: opacity 80ms ease-out;
+  transition: opacity 80ms ease-out;
   pointer-events: none;
 }
 
@@ -608,16 +610,25 @@ footer p {
 }
 
 .modalDialog > div {
-  height: 80%;
-  position: relative;
-  margin: 5%;
-  padding: 5px 20px 13px 20px;
+  width:550px;
+  height:550px;
+  position:absolute;
+  left:50%;
+  top:50%;
+  margin:-275px 0 0 -275px;
+  padding: 25px;
   background: #fff;
 }
 
+.modalDialog img {
+  display: block;
+  margin: auto;
+}
+
 .close {
-  background: #b32229; /* Core City Red */;
-  color: #FFFFFF;
+  background: #A76266; /* Dull Core City Red */
+  color: #E6E6E6;
+  opacity: 1;
   line-height: 25px;
   position: absolute;
   right: -12px;
@@ -625,10 +636,14 @@ footer p {
   top: -10px;
   width: 24px;
   text-decoration: none;
-  font-weight: bold;
   -webkit-border-radius: 12px;
   -moz-border-radius: 12px;
   border-radius: 12px;
+  -o-transition:0.25s;
+  -ms-transition:0.25s;
+  -moz-transition:0.25s;
+  -webkit-transition:0.25s;
+  transition:0.25s;
 }
 
 .close:hover { 
@@ -886,7 +901,7 @@ footer p {
 /* contact-section ends */
 
 
-/* LOCATIN-MAP ENDS */
+/* LOCATION-MAP ENDS */
 
 .container-fluid {
   padding-right: 0;
