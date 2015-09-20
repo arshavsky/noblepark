@@ -587,7 +587,7 @@ footer p {
 
 #modalImage {
   width: 500px;
-  margin-bottom: 10px;
+  margin: 0;
 }
 
 .modalDialog {
@@ -633,6 +633,7 @@ footer p {
   font-size: 0.9em;  
   line-height: 1.5em;
   font-weight: 300 !important;
+  line-height: 30px;
 }
 
 .modalDialog h2, h3 {
@@ -651,6 +652,11 @@ footer p {
   text-align: right;
   text-transform: uppercase;
   padding: 0;
+}
+
+#listHolder {
+  margin-top: 3px;
+  text-align: center;
 }
 
 .close {

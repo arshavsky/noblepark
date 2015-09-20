@@ -18,7 +18,7 @@ var styles = [
 
 	{ elementType: "geometry", 
 	  	stylers: [ 
-			{ saturation: 0 }
+			{ saturation: -100 }
 		]
 	} 
 ];
@@ -107,6 +107,9 @@ var nobleMarker = new google.maps.Marker({
 	title: "Noble Park Residences"
 });
 
+
+
+
 // Remove existing markers from the Map
 function removeMarkers() {
 
@@ -119,6 +122,9 @@ function removeMarkers() {
 	numberOfMarkers = 0;
 	placedMarkers = [];
 };
+
+
+
 
 // Place New Markers on the Map
 function placeMarkers(markersArray, iconType) {
