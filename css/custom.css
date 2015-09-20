@@ -428,8 +428,8 @@ sup {
 footer {
   background-color: #ffffff;
   overflow: auto;
-  padding-top: 1em;
-  padding-bottom: 2em;
+  padding-top: 50px;
+  padding-bottom: 25px;
 }
 
 footer h3 {
@@ -442,12 +442,17 @@ footer p {
   font-size: 0.8em;
 }
 
-#footer-noble-logo {
-  text-align: right;
-  margin-top: 0;
+#footerWrapper {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
 }
 
-#footer-bottom-right {
+#footer-noble-logo {
+  margin: 0;
+  line-height: 20px;
+  display: inline-block;
+  text-align: right;
 }
 /* footer ends*/
 
