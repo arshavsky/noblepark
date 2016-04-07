@@ -20,13 +20,12 @@ body {
 }
 
 h1 {
-  margin-top: .9em;
-  margin-bottom: 2em;
-  font-size: 2em;
+  margin-top: 12px;
+  margin-bottom: 28px;
+  font-size: 28px;
   font-weight: 300;
   text-transform: uppercase;
   text-align: center;
-  letter-spacing: 0.05em;
   color: #333333; /* Apple Gray */
 }
 
@@ -40,8 +39,8 @@ h1 {
 }
 
 h2 {
-  margin: 0.8em 0 0.8em 0;
-  font-size: 1.7em;
+  margin: 11px 0 11px 0;
+  font-size: 23px;
   font-weight: 300;
   color: #333333; /* Apple Gray */
 }
@@ -58,9 +57,9 @@ p {
 
 sup {
   font-weight: 300;
-  font-size: 0.5em;
+  font-size: 12px;
+  letter-spacing: 1px;
   color: #b32229; /* Core City Red */
-  letter-spacing: 0.05em;
 }
 
 /* general settings begin */
@@ -98,62 +97,11 @@ sup {
 
 #front-page-greeting h2 {
   font-weight: 400;
-  letter-spacing: -0.05em;
+  letter-spacing: -2px;
   display: table-cell;
   vertical-align: middle;
-  font-size: 0.6em;
+  font-size: 55px;
   color: #ffffff;
-}
-
-.btn-default {
-  color: white;
-  background-color: transparent;
-  border: 2px solid white;
-  font-size: 1.2em;
-  font-weight: 400;
-
-  -o-transition:0.2s;
-  -ms-transition:0.2s;
-  -moz-transition:0.2s;
-  -webkit-transition:0.2s;
-  transition:0.2s;
-}
-
-.btn-default:focus,
-.btn-default.focus {
-  color: white;
-  background-color: black;
-  border-color: black;
-}
-.btn-default:hover {
-  color: white;
-  background-color: #b32229; /* Core City Red */
-  border-color: #b32229; /* Core City Red */
-}
-.btn-default:active,
-.btn-default.active,
-.open > .dropdown-toggle.btn-default {
-  color: #ffffff;
-  background-color: transparent;
-  border-color: #ffffff;
-}
-.btn-default:active:hover,
-.btn-default.active:hover,
-.open > .dropdown-toggle.btn-default:hover,
-.btn-default:active:focus,
-.btn-default.active:focus,
-.open > .dropdown-toggle.btn-default:focus,
-.btn-default:active.focus,
-.btn-default.active.focus,
-.open > .dropdown-toggle.btn-default.focus {
-  color: #333333; /* Apple Gray */
-  background-color: #ffffff;
-  border-color: #ffffff;
-}
-.btn-default:active,
-.btn-default.active,
-.open > .dropdown-toggle.btn-default {
-  background-image: none;
 }
 /* front page greeting */
 
